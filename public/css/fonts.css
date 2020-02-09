@@ -1,0 +1,12 @@
+@font-face {
+    font-family: SFreg; /* Гарнитура шрифта */
+    src: url(../font/SFProDisplay-Regular.woff); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: SFmed; /* Гарнитура шрифта */
+    src: url(../font/SFProDisplay-Medium.woff); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: SFbold; /* Гарнитура шрифта */
+    src: url(../font/SFProDisplay-Bold.woff); /* Путь к файлу со шрифтом */
+   }
