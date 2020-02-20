@@ -20,7 +20,11 @@ class MainController extends Controller
     {
         $project = Project::find($id);
         $projects = Project::all();
-        return view('page', compact('project', 'projects'));
+        $previousID = Project::where('id', '<', $project->id)->max('id');
+        $nextID = Project::where('id', '>', $project->id)->min('id');
+        $lastID = Project::find(DB::table('projects')->max('id'));
+        $firstID = Project::find(DB::table('projects')->min('id'));
+        return view('page', compact('project', 'projects','previousID','nextID','lastID','firstID'));
     }
 
     public function click(Request $request)

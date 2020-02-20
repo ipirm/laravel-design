@@ -15,8 +15,8 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->longText('main_image');
-            $table->longText('project_images');
+            $table->longText('main_image')->default('image.png')->nullable();;
+            $table->longText('project_images')->default('image.png')->nullable();;
             $table->timestamps();
         });
     }

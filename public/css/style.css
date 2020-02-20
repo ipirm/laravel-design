@@ -14,7 +14,7 @@ body {
 	overflow-x: hidden;
 }
 body.home {
- position: relative;
+	position: relative;
 }
 body.page-project {
 	background: #fff;
@@ -85,7 +85,7 @@ nav{
 	text-align: center;
 	width: 182px;
 	font-size: 16px;
-  padding: 8px 1px 19px 0px;
+	padding: 8px 1px 19px 0px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 	cursor: pointer;
@@ -182,14 +182,17 @@ main{
 .project-nav {
 	position: fixed;
 	z-index: 1000;
-	top: 0;
+	top: 8px;
 	left: 0;
+	background-color: #fff;
+	padding-bottom: 25px;
 	width: 100%;
 }
+
 .project-nav__row {
 	display: flex;
 	justify-content: center;
-	margin: 0 -12px;
+	margin: -12px -12px;
 }
 .project-nav__col {
 	padding: 0 12px;
@@ -248,7 +251,7 @@ main{
 }
 .project-slider__item img.zoom {
 	transition-duration: 300ms;
-  transform: translate3d(0px, 0px, 0px) scale(3);
+	transform: translate3d(0px, 0px, 0px) scale(3);
 }
 
 .swiper-container-vertical>.swiper-scrollbar {
@@ -260,7 +263,7 @@ main{
 		max-width: 848px;
 	}
 	.card-col {
-			width: 50%;
+		width: 50%;
 	}
 }
 @media(max-width: 880px){
@@ -268,7 +271,7 @@ main{
 		max-width: 434px;
 	}
 	.card-col {
-			width: 100%;
+		width: 100%;
 	}
 	.nav-item {
 		width: 100%;

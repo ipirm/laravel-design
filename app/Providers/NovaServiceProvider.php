@@ -21,7 +21,6 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
         Nova::serving(function (ServingNova $event) {
             app()->setLocale('ru');
-
         });
     }
 

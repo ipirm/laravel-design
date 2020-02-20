@@ -6,20 +6,20 @@
         <div class="project-nav">
             <div class="project-nav__row">
                 <div class="project-nav__col">
-                    @if($project->id === 1)
-                        <a href="/" class="project-nav__arrow project-nav__prev"></a>
+                    @if($previousID === null)
+                        <a href="/project/{{$lastID->id}}" class="project-nav__arrow project-nav__prev"></a>
                     @else
-                        <a href="/project/{{$project->id - 1}}" class="project-nav__arrow project-nav__prev"></a>
+                        <a href="/project/{{$previousID}}" class="project-nav__arrow project-nav__prev"></a>
                     @endif
                 </div>
                 <div class="project-nav__col">
                     <a href="/" class="project-nav__close">ЗАКРЫТЬ</a>
                 </div>
                 <div class="project-nav__col">
-                    @if(count($projects) === $project->id)
-                        <a href="/project/{{$project->id}}" class="project-nav__arrow project-nav__next"></a>
+                    @if($nextID === null)
+                        <a href="/project/{{$firstID->id}}" class="project-nav__arrow project-nav__next"></a>
                     @else
-                        <a href="/project/{{$project->id +1}}" class="project-nav__arrow project-nav__next"></a>
+                        <a href="/project/{{$nextID}}" class="project-nav__arrow project-nav__next"></a>
                     @endif
                 </div>
             </div>

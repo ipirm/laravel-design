@@ -20,9 +20,9 @@ class CreateSettingsTable extends Migration
             $table->string('telegram');
             $table->string('jabber');
             $table->string('vip_pole');
-            $table->string('desktop_image');
-            $table->string('tablet_image');
-            $table->string('mobile_image');
+            $table->string('desktop_image')->default('image.png')->nullable();;
+            $table->string('tablet_image')->default('image.png')->nullable();;
+            $table->string('mobile_image')->default('image.png')->nullable();;
             $table->timestamps();
         });
         Schema::create('nova_pending_trix_attachments', function (Blueprint $table) {

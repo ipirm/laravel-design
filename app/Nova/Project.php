@@ -47,6 +47,7 @@ class Project extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Название','name'),
+            Text::make('Очередь','id'),
             Image::make('Главная картинка','main_image'),
             ArrayImages::make('Картинки проекта','project_images')->disk('public'),
         ];

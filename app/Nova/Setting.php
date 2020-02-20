@@ -9,7 +9,7 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
-
+use NovaButton\Button;
 class Setting extends Resource
 {
     public static function singleRecord(): bool
@@ -54,6 +54,7 @@ class Setting extends Resource
         return [
             ID::make()->sortable(),
             Number::make('Клики по рекламному банеру','click')->readonly(),
+            Button::make('Сбросить счетчик')->event('App\Events\AuctionUserWasOutbidded'),
             Text::make(('Заголовок'),'title'),
             Trix::make(('О нас'),'text'),
             Text::make(('Telegram'),'telegram')->hideFromIndex(),
